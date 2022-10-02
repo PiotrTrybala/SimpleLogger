@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggerFormatter.cpp
-include/LoggerFormatter.h
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp
+include/Logger.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
 
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
 iostream
@@ -25,6 +25,16 @@ sstream
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
 unordered_map
 -
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
+iostream
+-
+cstdlib
+-
+string
+-
+LoggerFormatter.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
 
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
 iostream

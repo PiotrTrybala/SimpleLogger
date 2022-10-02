@@ -83,19 +83,34 @@ CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggerFormatter.cpp -o CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.s
 
+CMakeFiles/SimpleLogger.dir/Logger.cpp.o: CMakeFiles/SimpleLogger.dir/flags.make
+CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SimpleLogger.dir/Logger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleLogger.dir/Logger.cpp.o -c /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp
+
+CMakeFiles/SimpleLogger.dir/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleLogger.dir/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp > CMakeFiles/SimpleLogger.dir/Logger.cpp.i
+
+CMakeFiles/SimpleLogger.dir/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleLogger.dir/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp -o CMakeFiles/SimpleLogger.dir/Logger.cpp.s
+
 # Object files for target SimpleLogger
 SimpleLogger_OBJECTS = \
 "CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o" \
-"CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o"
+"CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o" \
+"CMakeFiles/SimpleLogger.dir/Logger.cpp.o"
 
 # External object files for target SimpleLogger
 SimpleLogger_EXTERNAL_OBJECTS =
 
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o
+libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/Logger.cpp.o
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/build.make
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libSimpleLogger.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libSimpleLogger.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/SimpleLogger.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleLogger.dir/link.txt --verbose=$(VERBOSE)
 

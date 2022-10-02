@@ -14,8 +14,9 @@ namespace NFCServer {
 
                 string _name;
                 LoggerFormatter* _formatter;
+                std::ostream& os = std::cout;
 
-                void Print(const LoggerLevel& level, const std::string& message, const std::string& format = DEFAULT_FORMAT);
+                void Print(const LoggerLevel& level, const std::string& message, const std::string& format);
             public:
                 Logger(const std::string& _loggerName, const std::string& format = DEFAULT_FORMAT) : _name(_loggerName), _formatter(new LoggerFormatter(_loggerName)) {}
                 ~Logger() {

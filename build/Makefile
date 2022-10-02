@@ -150,6 +150,33 @@ FormatterColorsBuilder.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s
 .PHONY : FormatterColorsBuilder.cpp.s
 
+Logger.o: Logger.cpp.o
+
+.PHONY : Logger.o
+
+# target to build an object file
+Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/Logger.cpp.o
+.PHONY : Logger.cpp.o
+
+Logger.i: Logger.cpp.i
+
+.PHONY : Logger.i
+
+# target to preprocess a source file
+Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/Logger.cpp.i
+.PHONY : Logger.cpp.i
+
+Logger.s: Logger.cpp.s
+
+.PHONY : Logger.s
+
+# target to generate assembly for a file
+Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/Logger.cpp.s
+.PHONY : Logger.cpp.s
+
 LoggerFormatter.o: LoggerFormatter.cpp.o
 
 .PHONY : LoggerFormatter.o
@@ -189,6 +216,9 @@ help:
 	@echo "... FormatterColorsBuilder.o"
 	@echo "... FormatterColorsBuilder.i"
 	@echo "... FormatterColorsBuilder.s"
+	@echo "... Logger.o"
+	@echo "... Logger.i"
+	@echo "... Logger.s"
 	@echo "... LoggerFormatter.o"
 	@echo "... LoggerFormatter.i"
 	@echo "... LoggerFormatter.s"
