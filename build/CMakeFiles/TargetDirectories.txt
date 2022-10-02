@@ -1,0 +1,3 @@
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles/rebuild_cache.dir
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles/edit_cache.dir
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles/SimpleLogger.dir

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp
+include/build_test.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/build_test.h
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/build_test.h
+iostream
+-
+
