@@ -19,10 +19,19 @@ namespace NFCServer
 
             ForegroundFormatColor _foregroundColor = ForegroundFormatColor::FG_DEFAULT;
             BackgroundFormatColor _backgroundColor = BackgroundFormatColor::BG_DEFAULT;
+
             bool _isMessageBold;
-            bool _isMessageItalic;
-            bool _isMessageStrikethrough;
-            bool _isMessageUnderline;
+            bool _isColoringUsed;
+            bool _isStylingUsed;
+
+            bool IsStylingEnabled() {
+                return this->_isMessageBold;
+            }
+
+            bool IsColoringEnabled() {
+                return this->_backgroundColor != BackgroundFormatColor::BG_DEFAULT 
+                    || this->_foregroundColor != ForegroundFormatColor::FG_DEFAULT;
+            }
 
 
         public:

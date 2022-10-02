@@ -10,68 +10,83 @@ namespace NFCServer
             this->_foregroundColor = ForegroundFormatColor::FG_DEFAULT;
             this->_backgroundColor = BackgroundFormatColor::BG_DEFAULT;
             this->_isMessageBold = false;
-            this->_isMessageItalic = false;
-            this->_isMessageStrikethrough = false;
-            this->_isMessageUnderline = false;
+            this->_isColoringUsed = false;
+            this->_isStylingUsed = false;
         }
         FormatterColorsBuilder::~FormatterColorsBuilder() {}
         FormatterColorsBuilder::FormatterColorsBuilder(const FormatterColorsBuilder &rhs)
         {
             this->_builderMessage = rhs._builderMessage;
+            this->_isMessageBold = rhs._isMessageBold;
+            this->_isMessageBold = rhs._isMessageBold;
+            this->_isColoringUsed = rhs._isColoringUsed;
+            this->_isStylingUsed = rhs._isStylingUsed;
         }
         FormatterColorsBuilder FormatterColorsBuilder::operator=(const FormatterColorsBuilder &rhs)
         {
             if (this == &rhs) return *this;
             this->_builderMessage = rhs._builderMessage;
+            this->_isMessageBold = rhs._isMessageBold;
+            this->_isMessageBold = rhs._isMessageBold;
+            this->_isColoringUsed = rhs._isColoringUsed;
+            this->_isStylingUsed = rhs._isStylingUsed;
             return *this;
         }
         FormatterColorsBuilder &FormatterColorsBuilder::Color(ForegroundFormatColor fgColor, BackgroundFormatColor bgColor)
         {
+            this->_isColoringUsed = true;
             this->_backgroundColor = bgColor;
             this->_foregroundColor = fgColor;
             return *this;
         }
+
         FormatterColorsBuilder &FormatterColorsBuilder::Bold() {
+            this->_isStylingUsed = true;
             this->_isMessageBold = true;
             return *this;
         }
 
         FormatterColorsBuilder &FormatterColorsBuilder::Italic() {
-            this->_isMessageItalic = true;
             return *this;
         }
 
         FormatterColorsBuilder &FormatterColorsBuilder::UnderLine() {
-            this->_isMessageUnderline = true;
             return *this;
         }
 
         FormatterColorsBuilder &FormatterColorsBuilder::Strikethrough() {
-            this->_isMessageStrikethrough = true;
             return *this;
         }
 
         const std::string FormatterColorsBuilder::ToString() {
 
             std::stringstream ss;
+            if (!this->_isColoringUsed && !this->_isStylingUsed) {
+                ss << this->_builderMessage << "\n";
+                return ss.str();
+            }
+
+            ss << "\033[";
 
             std::string _foregroundColor = std::to_string((int) this->_foregroundColor);
             std::string _backgroundColor = std::to_string((int) this->_backgroundColor);
 
-            ss << "\033[";
+            if (IsStylingEnabled()) {
+                if (this->_isMessageBold) ss << "1";
+            }
 
-            // TODO: multiple applicable styles on message
-            if (this->_isMessageBold) ss << "1";
-            else if (this->_isMessageItalic) ss << "3";
-            else if (this->_isMessageStrikethrough) ss << "9";
-            else if (this->_isMessageUnderline) ss << "4";
-            // TODO: serve background color
-            ss << ";" << _foregroundColor;
+            if (IsColoringEnabled()) {
+                if (IsStylingEnabled()) ss << ";";
+                if (this->_foregroundColor != ForegroundFormatColor::FG_DEFAULT) { 
+                    ss << _foregroundColor;
+                    if (this->_backgroundColor != BackgroundFormatColor::BG_DEFAULT) ss << ";";
+                }
+                if (this->_backgroundColor != BackgroundFormatColor::BG_DEFAULT) ss << _backgroundColor;
+            }
 
-            ss << "m";
-            
-            ss << this->_builderMessage;
-            ss << "\033[0m";
+            ss << "m" << this->_builderMessage;
+
+            ss << "\033[0m\n";
             return ss.str();
         }
     }

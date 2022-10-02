@@ -13,7 +13,7 @@ namespace NFCServer {
             FG_MAGENTA = 35,
             FG_CYAN = 36,
             FG_WHITE = 37,
-            FG_DEFAULT
+            FG_DEFAULT = 0
         };
 
         enum BackgroundFormatColor {
@@ -25,7 +25,7 @@ namespace NFCServer {
             BG_MAGENTA = 45,
             BG_CYAN = 46,
             BG_WHITE = 47,
-            BG_DEFAULT
+            BG_DEFAULT = 0
         };
     }
 }
