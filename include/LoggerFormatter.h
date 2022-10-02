@@ -1,8 +1,11 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <ctime>
 #include "FormatterType.h"
+#include "FormatterColorsBuilder.h"
+#include <sstream>
 
 
 
