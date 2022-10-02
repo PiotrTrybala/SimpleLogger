@@ -123,32 +123,32 @@ SimpleLogger/fast:
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/build
 .PHONY : SimpleLogger/fast
 
-build_test.o: build_test.cpp.o
+FormatterColorsBuilder.o: FormatterColorsBuilder.cpp.o
 
-.PHONY : build_test.o
+.PHONY : FormatterColorsBuilder.o
 
 # target to build an object file
-build_test.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/build_test.cpp.o
-.PHONY : build_test.cpp.o
+FormatterColorsBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
+.PHONY : FormatterColorsBuilder.cpp.o
 
-build_test.i: build_test.cpp.i
+FormatterColorsBuilder.i: FormatterColorsBuilder.cpp.i
 
-.PHONY : build_test.i
+.PHONY : FormatterColorsBuilder.i
 
 # target to preprocess a source file
-build_test.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/build_test.cpp.i
-.PHONY : build_test.cpp.i
+FormatterColorsBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.i
+.PHONY : FormatterColorsBuilder.cpp.i
 
-build_test.s: build_test.cpp.s
+FormatterColorsBuilder.s: FormatterColorsBuilder.cpp.s
 
-.PHONY : build_test.s
+.PHONY : FormatterColorsBuilder.s
 
 # target to generate assembly for a file
-build_test.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/build_test.cpp.s
-.PHONY : build_test.cpp.s
+FormatterColorsBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s
+.PHONY : FormatterColorsBuilder.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... SimpleLogger"
-	@echo "... build_test.o"
-	@echo "... build_test.i"
-	@echo "... build_test.s"
+	@echo "... FormatterColorsBuilder.o"
+	@echo "... FormatterColorsBuilder.i"
+	@echo "... FormatterColorsBuilder.s"
 .PHONY : help
 
 

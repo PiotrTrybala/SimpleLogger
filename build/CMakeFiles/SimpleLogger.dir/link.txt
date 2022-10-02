@@ -1,2 +1,2 @@
-/usr/bin/ar qc libSimpleLogger.a  CMakeFiles/SimpleLogger.dir/build_test.cpp.o
+/usr/bin/ar qc libSimpleLogger.a  CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
 /usr/bin/ranlib libSimpleLogger.a

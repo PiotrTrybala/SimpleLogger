@@ -2,6 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include "FormatterType.h"
+#include <sstream>
 
 using std::string;
 
@@ -12,6 +13,7 @@ namespace NFCServer
 
         class FormatterColorsBuilder
         {
+        
 
             string _builderMessage;
 
@@ -24,17 +26,17 @@ namespace NFCServer
 
 
         public:
-            FormatterColorsBuilder();
+            FormatterColorsBuilder(const std::string& _message);
             ~FormatterColorsBuilder();
             FormatterColorsBuilder(const FormatterColorsBuilder &rhs);
             FormatterColorsBuilder operator=(const FormatterColorsBuilder &rhs);
 
-            FormatterColorsBuilder &Color(ForegroundFormatColor fgColor, BackgroundFormatColor bgColor = BackgroundFormatColor::BG_DEFAULT);
+            FormatterColorsBuilder &Color(ForegroundFormatColor fgColor, BackgroundFormatColor bgColor  = BackgroundFormatColor::BG_DEFAULT);
             FormatterColorsBuilder &Bold();
             FormatterColorsBuilder &Italic();
             FormatterColorsBuilder &UnderLine();
             FormatterColorsBuilder &Strikethrough();
-            const std::string &ToString();
+            const std::string ToString();
         };
 
     }

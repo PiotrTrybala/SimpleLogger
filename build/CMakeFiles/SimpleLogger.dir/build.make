@@ -57,27 +57,27 @@ include CMakeFiles/SimpleLogger.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SimpleLogger.dir/flags.make
 
-CMakeFiles/SimpleLogger.dir/build_test.cpp.o: CMakeFiles/SimpleLogger.dir/flags.make
-CMakeFiles/SimpleLogger.dir/build_test.cpp.o: ../build_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SimpleLogger.dir/build_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleLogger.dir/build_test.cpp.o -c /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp
+CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: CMakeFiles/SimpleLogger.dir/flags.make
+CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../FormatterColorsBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o -c /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp
 
-CMakeFiles/SimpleLogger.dir/build_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleLogger.dir/build_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp > CMakeFiles/SimpleLogger.dir/build_test.cpp.i
+CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp > CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.i
 
-CMakeFiles/SimpleLogger.dir/build_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleLogger.dir/build_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp -o CMakeFiles/SimpleLogger.dir/build_test.cpp.s
+CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp -o CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s
 
 # Object files for target SimpleLogger
 SimpleLogger_OBJECTS = \
-"CMakeFiles/SimpleLogger.dir/build_test.cpp.o"
+"CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o"
 
 # External object files for target SimpleLogger
 SimpleLogger_EXTERNAL_OBJECTS =
 
-libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/build_test.cpp.o
+libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/build.make
 libSimpleLogger.a: CMakeFiles/SimpleLogger.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libSimpleLogger.a"

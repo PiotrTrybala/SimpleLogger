@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SimpleLogger.dir/build_test.cpp.o"
+  "CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o"
   "libSimpleLogger.a"
   "libSimpleLogger.pdb"
 )

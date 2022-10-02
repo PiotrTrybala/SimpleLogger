@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp" "/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles/SimpleLogger.dir/build_test.cpp.o"
+  "/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp" "/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

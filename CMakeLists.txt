@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 set (CPP_SOURCES
-    build_test.cpp
+    FormatterColorsBuilder.cpp
 )
 
 add_library(${PROJECT_NAME} ${CPP_SOURCES})

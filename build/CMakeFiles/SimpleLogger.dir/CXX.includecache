@@ -6,11 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build_test.cpp
-include/build_test.h
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/build_test.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp
+include/FormatterColorsBuilder.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
 
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/build_test.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
 iostream
+-
+string
+-
+cstdlib
+-
+FormatterType.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+sstream
+-
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+unordered_map
 -
 
