@@ -35,10 +35,16 @@ namespace NFCServer
 
 
         public:
+            FormatterColorsBuilder();
             FormatterColorsBuilder(const std::string& _message);
             ~FormatterColorsBuilder();
             FormatterColorsBuilder(const FormatterColorsBuilder &rhs);
             FormatterColorsBuilder operator=(const FormatterColorsBuilder &rhs);
+
+            FormatterColorsBuilder& AddBuilderMessage(const std::string& _message) {
+                this->_builderMessage = _message;
+                return *this;
+            }
 
             FormatterColorsBuilder &Color(ForegroundFormatColor fgColor, BackgroundFormatColor bgColor  = BackgroundFormatColor::BG_DEFAULT);
             FormatterColorsBuilder &Bold();

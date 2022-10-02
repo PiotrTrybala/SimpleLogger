@@ -5,3 +5,8 @@ CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggerFormatter.cpp
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h

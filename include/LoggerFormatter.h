@@ -27,7 +27,7 @@ namespace NFCServer {
                     return *this;
                 }
 
-                const std::string FormatMessage(const std::string& message, const LoggerLevel& level);
+                const std::string FormatMessage(const LoggerLevel& level, const std::string& message, const std::string& format);
         };
     }
 }

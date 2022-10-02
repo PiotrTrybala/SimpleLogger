@@ -4,7 +4,13 @@ namespace NFCServer
 {
     namespace Logger
     {
-
+        FormatterColorsBuilder::FormatterColorsBuilder() {
+            this->_foregroundColor = ForegroundFormatColor::FG_DEFAULT;
+            this->_backgroundColor = BackgroundFormatColor::BG_DEFAULT;
+            this->_isMessageBold = false;
+            this->_isColoringUsed = false;
+            this->_isStylingUsed = false;
+        }
         FormatterColorsBuilder::FormatterColorsBuilder(const std::string& _message) {
             this->_builderMessage = _message;
             this->_foregroundColor = ForegroundFormatColor::FG_DEFAULT;
@@ -86,7 +92,7 @@ namespace NFCServer
 
             ss << "m" << this->_builderMessage;
 
-            ss << "\033[0m\n";
+            ss << "\033[0m";
             return ss.str();
         }
     }

@@ -5,3 +5,8 @@ CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../FormatterColorsBuil
 CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../include/FormatterColorsBuilder.h
 CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../include/FormatterType.h
 
+CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../LoggerFormatter.cpp
+CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../include/FormatterColorsBuilder.h
+CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../include/FormatterType.h
+CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../include/LoggerFormatter.h
+

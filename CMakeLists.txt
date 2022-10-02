@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 set (CPP_SOURCES
     FormatterColorsBuilder.cpp
+    LoggerFormatter.cpp
 )
 
 add_library(${PROJECT_NAME} ${CPP_SOURCES})

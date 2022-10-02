@@ -27,6 +27,13 @@ namespace NFCServer {
             BG_WHITE = 47,
             BG_DEFAULT = 0
         };
+
+        enum LoggerLevel {
+            INFO,
+            WARN,
+            ERROR,
+            NONE
+        };
     }
 }
 

@@ -3,7 +3,7 @@
 namespace NFCServer {
     namespace Logger {
         
-        const std::string LoggerFormatter::FormatMessage(const std::string& message, const LoggerLevel& level) {
+        const std::string LoggerFormatter::FormatMessage(const LoggerLevel& level, const std::string& message, const std::string& format) {
             std::stringstream ss;
             time_t unparsed = time(nullptr);
             struct tm* current_time = localtime(&unparsed);
@@ -15,13 +15,13 @@ namespace NFCServer {
                 return out;
             };
 
-            for (int c = 0; c < message.length(); c++) {
+            for (int c = 0; c < format.length(); c++) {
                 
-                char current = message[c];
+                char current = format[c];
 
                 if (current == '%') {
                     c++;
-                    switch(message[c]) {
+                    switch(format[c]) {
                         // P - message to format
                         case 'P':
                             ss << message;
@@ -34,11 +34,11 @@ namespace NFCServer {
                             break;
                         // Y - year
                         case 'Y':
-                            ss << formatTime(current_time->tm_year);
+                            ss << formatTime(current_time->tm_year + 1900);
                             break;
                         // M - month
                         case 'M':
-                            ss << formatTime(current_time->tm_mon);
+                            ss << formatTime(current_time->tm_mon + 1);
                             break;
                         // D - day
                         case 'D':
@@ -61,25 +61,28 @@ namespace NFCServer {
                             ss << _loggerName;
                             break;
                         // L - logging level
+
                         case 'L':  {
                             FormatterColorsBuilder builder;
 
                             switch(level) {
                                 case LoggerLevel::INFO:
-                                    builder.AddBuilderMessage("Info")
+                                    builder = builder.AddBuilderMessage("Info")
                                             .Color(ForegroundFormatColor::FG_GREEN);
                                     break;
                                 case LoggerLevel::WARN:
-                                    builder.AddBuilderMessage("Warn")
+                                    builder = builder.AddBuilderMessage("Warn")
                                             .Color(ForegroundFormatColor::FG_YELLOW);
                                     break;
                                 case LoggerLevel::ERROR:
-                                    builder.AddBuilderMessage("Error")
+                                    builder = builder.AddBuilderMessage("Error")
                                             .Color(ForegroundFormatColor::FG_RED);
                                     break;
                                 case LoggerLevel::NONE:
                                     break;
                             }
+
+                            builder = builder.Bold();
                             
                             ss << builder.ToString();
 
