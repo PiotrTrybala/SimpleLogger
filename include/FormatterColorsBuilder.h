@@ -15,6 +15,14 @@ namespace NFCServer
 
             string _builderMessage;
 
+            ForegroundFormatColor _foregroundColor = ForegroundFormatColor::FG_DEFAULT;
+            BackgroundFormatColor _backgroundColor = BackgroundFormatColor::BG_DEFAULT;
+            bool _isMessageBold;
+            bool _isMessageItalic;
+            bool _isMessageStrikethrough;
+            bool _isMessageUnderline;
+
+
         public:
             FormatterColorsBuilder();
             ~FormatterColorsBuilder();
