@@ -10,9 +10,6 @@ CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/FormatterColorsBuilder.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/FormatterTypes.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/Logger.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/LoggerFormatter.h
-CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/LoggerTypes.h
-CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/LoggingContext.h
-CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/TsQueue.h
 
 CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../LoggerFormatter.cpp
 CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o: ../include/FormatterColorsBuilder.h

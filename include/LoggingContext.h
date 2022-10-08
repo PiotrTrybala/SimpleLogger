@@ -9,8 +9,6 @@
 #include "LoggerTypes.h"
 #include "TsQueue.h"
 
-class Logger;
-
 namespace NFCServer {
     namespace Logger {
         class LoggingContext {
@@ -45,8 +43,8 @@ namespace NFCServer {
                     _contextLogger = new Logger(
                         rhs._contextLogger->_name, 
                         rhs._contextLogger->_format,
-                        rhs._contextLogger->_useLoggingContext,
-                        rhs._contextLogger->_context
+                        rhs._contextLogger->_useLoggingContext
+                        //, rhs._contextLogger->_context
                         );
                 }
 
@@ -58,8 +56,8 @@ namespace NFCServer {
                     _contextLogger = new Logger(
                         rhs._contextLogger->_name, 
                         rhs._contextLogger->_format,
-                        rhs._contextLogger->_useLoggingContext,
-                        rhs._contextLogger->_context
+                        rhs._contextLogger->_useLoggingContext
+                        // ,rhs._contextLogger->_context
                         );
                     return *this;
                 }

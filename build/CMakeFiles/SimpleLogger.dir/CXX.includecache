@@ -39,8 +39,6 @@ string
 -
 LoggerFormatter.h
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
-LoggingContext.h
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggingContext.h
 
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
 iostream
