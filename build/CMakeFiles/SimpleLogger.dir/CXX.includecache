@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp
+include/Logger.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
+
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggingContext.cpp
 include/LoggingContext.h
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggingContext.h
