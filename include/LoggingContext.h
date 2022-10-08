@@ -2,15 +2,19 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <atomic>
+#include <map>
+
 #include "Logger.h"
 #include "LoggerTypes.h"
 #include "TsQueue.h"
-#include <atomic>
-#include <map>
+
+class Logger;
 
 namespace NFCServer {
     namespace Logger {
         class LoggingContext {
+            
             
             friend class Logger;
 

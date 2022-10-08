@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -7,11 +8,12 @@
 
 #define DEFAULT_FORMAT "[%Y/%M/%D %H:%m:%S] {%L} (%l) %P"
 
+class LoggingContext;
+
 namespace NFCServer
 {
     namespace Logger
     {
-
         class Logger
         {
             friend class LoggingContext;

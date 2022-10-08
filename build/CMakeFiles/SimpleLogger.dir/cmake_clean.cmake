@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o"
   "CMakeFiles/SimpleLogger.dir/Logger.cpp.o"
   "CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o"
+  "CMakeFiles/SimpleLogger.dir/LoggingContext.cpp.o"
   "libSimpleLogger.a"
   "libSimpleLogger.pdb"
 )

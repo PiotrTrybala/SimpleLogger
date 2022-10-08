@@ -5,6 +5,8 @@
 
 #include <iostream>
 
+// TODO: fix tests for LoggerFormatter
+
 using namespace NFCServer::Logger;
 using namespace std;
 
@@ -14,7 +16,7 @@ TEST_CASE("Simple log without formatting") {
 
     LoggerFormatter formatter {LoggerName};
 
-    string result = formatter.FormatMessage("Message", LoggerLevel::NONE);
+    string result = formatter.FormatMessage(LoggerLevel::NONE, "Message");
 
     CHECK(result == "Message\n");
 
@@ -23,13 +25,13 @@ TEST_CASE("Simple log without formatting") {
 TEST_CASE("Simple log with logger level") {
     LoggerFormatter formatter {LoggerName};
     string formatString = "[%L] Simple message";
-    string result = formatter.FormatMessage(formatString, LoggerLevel::INFO);
+    string result = formatter.FormatMessage(LoggerLevel::INFO, formatString, );
     CHECK(result == "[\033[1;32mInfo\033[0m] Simple message\n");
 
-    result = formatter.FormatMessage(formatString, LoggerLevel::WARN);
+    result = formatter.FormatMessage(LoggerLevel::WARN, formatString);
     CHECK(result == "[\033[1;33mWarn\033[0m] Simple message\n");
 
-    result = formatter.FormatMessage(formatString, LoggerLevel::ERROR);
+    result = formatter.FormatMessage(LoggerLevel::ERROR, formatString);
     CHECK(result == "[\033[1;31mError\033[0m] Simple message\n");
 
 }

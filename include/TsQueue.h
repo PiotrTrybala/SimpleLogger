@@ -21,16 +21,13 @@ namespace NFCServer {
                 TsQueue(const TsQueue& rhs) 
                     : _queue(rhs._queue), _queueCondition(rhs._queueCondition), _queueMutex(rhs._queueMutex) {}
                 TsQueue& operator=(const TsQueue& rhs) {
-                    if (this == &rhs) return;
-                    _queue = rhs._queue;
-                    _queueCondition = rhs._queueCondition;
-                    _queueMutex = rhs._queueMutex;
+                    if (this == &rhs) return *this;
                     return *this;
                 }
 
                 void Enqueue(T t) {
 
-                    std::lock_quard<std::mutex> lock(m);
+                    std::lock_guard<std::mutex> lock(_queueMutex);
                     _queue.push(t);
                     _queueCondition.notify_one();
                 }
