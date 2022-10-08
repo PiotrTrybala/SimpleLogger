@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "FormatterType.h"
+#include "FormatterTypes.h"
 #include <sstream>
 
 using std::string;

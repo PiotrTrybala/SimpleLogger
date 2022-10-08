@@ -204,6 +204,33 @@ LoggerFormatter.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.s
 .PHONY : LoggerFormatter.cpp.s
 
+LoggingContext.o: LoggingContext.cpp.o
+
+.PHONY : LoggingContext.o
+
+# target to build an object file
+LoggingContext.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/LoggingContext.cpp.o
+.PHONY : LoggingContext.cpp.o
+
+LoggingContext.i: LoggingContext.cpp.i
+
+.PHONY : LoggingContext.i
+
+# target to preprocess a source file
+LoggingContext.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/LoggingContext.cpp.i
+.PHONY : LoggingContext.cpp.i
+
+LoggingContext.s: LoggingContext.cpp.s
+
+.PHONY : LoggingContext.s
+
+# target to generate assembly for a file
+LoggingContext.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/LoggingContext.cpp.s
+.PHONY : LoggingContext.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... LoggerFormatter.o"
 	@echo "... LoggerFormatter.i"
 	@echo "... LoggerFormatter.s"
+	@echo "... LoggingContext.o"
+	@echo "... LoggingContext.i"
+	@echo "... LoggingContext.s"
 .PHONY : help
 
 

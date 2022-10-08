@@ -4,15 +4,24 @@
 CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/FormatterColorsBuilder.cpp
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
- /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/Logger.cpp
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
- /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
 CMakeFiles/SimpleLogger.dir/LoggerFormatter.cpp.o
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggerFormatter.cpp
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
- /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
  /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
+CMakeFiles/SimpleLogger.dir/LoggingContext.cpp.o
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggingContext.cpp
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerFormatter.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerTypes.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggingContext.h
+ /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/TsQueue.h

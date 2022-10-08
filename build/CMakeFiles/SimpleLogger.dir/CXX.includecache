@@ -10,6 +10,10 @@
 include/Logger.h
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
 
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/LoggingContext.cpp
+include/LoggingContext.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggingContext.h
+
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
 iostream
 -
@@ -17,12 +21,12 @@ string
 -
 cstdlib
 -
-FormatterType.h
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+FormatterTypes.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
 sstream
 -
 
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
 unordered_map
 -
 
@@ -45,10 +49,42 @@ cstdlib
 -
 ctime
 -
-FormatterType.h
-/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterType.h
+FormatterTypes.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
 FormatterColorsBuilder.h
 /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterColorsBuilder.h
 sstream
+-
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerTypes.h
+FormatterTypes.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/FormatterTypes.h
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggingContext.h
+iostream
+-
+string
+-
+cstdlib
+-
+atomic
+-
+map
+-
+Logger.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/Logger.h
+LoggerTypes.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/LoggerTypes.h
+TsQueue.h
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/TsQueue.h
+
+/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/include/TsQueue.h
+thread
+-
+mutex
+-
+condition_variable
+-
+queue
 -
 

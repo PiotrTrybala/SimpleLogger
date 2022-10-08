@@ -3,7 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include "FormatterType.h"
+#include "FormatterTypes.h"
 #include "FormatterColorsBuilder.h"
 #include <sstream>
 
