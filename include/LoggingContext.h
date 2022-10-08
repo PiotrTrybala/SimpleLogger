@@ -12,16 +12,6 @@
 namespace NFCServer {
     namespace Logger {
         class LoggingContext {
-<<<<<<< HEAD
-            private:
-
-                
-
-            public:
-
-=======
-            
-            
             friend class Logger;
 
             private:
@@ -78,7 +68,6 @@ namespace NFCServer {
 
                 void RunContext();
                 void StopContext();
->>>>>>> SimpleLogger_LoggingContext
 
         };
 
