@@ -7,8 +7,12 @@ namespace NFCServer {
     namespace Logger {
 
         class LoggingContext {
+            private:
 
-            
+                
+
+            public:
+
 
         };
 
