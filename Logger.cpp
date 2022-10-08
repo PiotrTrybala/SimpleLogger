@@ -2,7 +2,7 @@
 namespace NFCServer {
     namespace Logger {
 
-        Logger::Logger(const std::string &_loggerName, const std::string &format = DEFAULT_FORMAT, bool useLoggingContext = false, LoggingContext *ctx = nullptr) 
+        Logger::Logger(const std::string& _loggerName, const std::string &format, bool useLoggingContext, LoggingContext *ctx) 
             : _name(_loggerName), _format(format), _useLoggingContext(useLoggingContext), _context(ctx) {
                 _formatter = new LoggerFormatter(_loggerName);
             }
