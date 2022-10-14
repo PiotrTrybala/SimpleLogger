@@ -1,26 +1,29 @@
-#include "../include/LoggingContext.h"
 #include "../include/Logger.h"
+#include "../include/LoggingContext.h"
+#include "../include/GlobalContextInstance.h"
 
-using namespace NFCServer::Logger;
+using NFCServer::Logger::Logger;
 using namespace std;
 
+extern NFCServer::Logger::LoggingContext* NFCServer::Logger::GetContextInstance();
+extern void NFCServer::Logger::DestroyInstance();
+
 int main() {
-    LoggingContext context {};
 
-    Logger serverLogger {"ServerLogger", DEFAULT_FORMAT, true, &context};
-    Logger dbLogger {"DbLogger", DEFAULT_FORMAT, true, &context};
+    Logger serverLogger {"ServerLogger", DEFAULT_FORMAT, true};
+    Logger dbLogger {"DbLogger", DEFAULT_FORMAT, true};
 
-    // context.RegisterLogger(serverLogger);
-    context.RegisterLogger(dbLogger);
+    NFCServer::Logger::GetContextInstance()->RegisterLogger(serverLogger);
 
-    // context.RunContext();
+    NFCServer::Logger::GetContextInstance()->RunContext();
 
-    // serverLogger.Info("Hello from context!");
-    // dbLogger.Warn("Hello from context!");
+    serverLogger.Info("Hello from context!");
+    dbLogger.Warn("Hello from context!");
 
-    // context.StopContext();
+    NFCServer::Logger::GetContextInstance()->StopContext();
+    NFCServer::Logger::GetContextInstance()->Clear();
 
-    // context.Clear();
+    NFCServer::Logger::DestroyInstance();
 
     return 0;
 }

@@ -4,17 +4,13 @@
 #include <string>
 
 #include "LoggerFormatter.h"
-#include "LoggingContext.h"
 
 #define DEFAULT_FORMAT "[%Y/%M/%D %H:%m:%S] {%L} (%l) %P"
-
-
 
 namespace NFCServer
 {
     namespace Logger
     {
-        class LoggingContext;
         class Logger
         {
             friend class LoggingContext;
@@ -26,12 +22,11 @@ namespace NFCServer
             std::ostream &os = std::cout;
 
             bool _useLoggingContext;
-            LoggingContext *_context;
 
             void Print(const LoggerLevel &level, const std::string &message, const std::string &format);
 
         public:
-            Logger(const std::string& _loggerName, const std::string &format = DEFAULT_FORMAT, bool useLoggingContext = false, LoggingContext *ctx = nullptr);
+            Logger(const std::string& _loggerName, const std::string &format = DEFAULT_FORMAT, bool useLoggingContext = false);
             ~Logger();
             Logger(const Logger &rhs);
             Logger& operator=(const Logger &rhs);

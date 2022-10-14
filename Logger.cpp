@@ -1,9 +1,12 @@
 #include "include/Logger.h"
+#include "include/GlobalContextInstance.h"
+
+extern NFCServer::Logger::LoggingContext* GetContextInstance();
 namespace NFCServer {
     namespace Logger {
 
-        Logger::Logger(const std::string& _loggerName, const std::string &format, bool useLoggingContext, LoggingContext *ctx) 
-            : _name(_loggerName), _format(format), _useLoggingContext(useLoggingContext), _context(ctx) {
+        Logger::Logger(const std::string& _loggerName, const std::string &format, bool useLoggingContext) 
+            : _name(_loggerName), _format(format), _useLoggingContext(useLoggingContext) {
                 _formatter = new LoggerFormatter(_loggerName);
             }
         Logger::~Logger()
@@ -16,8 +19,6 @@ namespace NFCServer {
         {
             _formatter = new LoggerFormatter(rhs._name);
             *_formatter = *rhs._formatter;
-            _context = new LoggingContext();
-            *_context = *rhs._context;
         }
         Logger& Logger::operator=(const Logger &rhs)
         {
@@ -28,15 +29,12 @@ namespace NFCServer {
             // TODO: check if this assignment is necessary
             *_formatter = *rhs._formatter;
 
-            _context = new LoggingContext();
-            *_context = *rhs._context;
-
             return *this;
         }
 
         void Logger::Print(const LoggerLevel& level, const std::string& message, const std::string& format = DEFAULT_FORMAT) {
             if (this->_useLoggingContext) {
-                _context->Enqueue(_name, level, message, format);
+                GetContextInstance()->Enqueue(_name, level, message, format);
             } else {
                 os << _formatter->FormatMessage(level, message, format);
             }

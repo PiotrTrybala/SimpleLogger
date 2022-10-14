@@ -22,7 +22,7 @@ namespace NFCServer {
             _contextLogger = new Logger(
                 rhs._contextLogger->_name,
                 rhs._contextLogger->_format,
-                rhs._contextLogger->_useLoggingContext, rhs._contextLogger->_context);
+                rhs._contextLogger->_useLoggingContext);
         }
 
         LoggingContext &LoggingContext::operator=(const LoggingContext &rhs)
@@ -35,7 +35,7 @@ namespace NFCServer {
             _contextLogger = new Logger(
                 rhs._contextLogger->_name,
                 rhs._contextLogger->_format,
-                rhs._contextLogger->_useLoggingContext, rhs._contextLogger->_context);
+                rhs._contextLogger->_useLoggingContext);
             return *this;
         }
 

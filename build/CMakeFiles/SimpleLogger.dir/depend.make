@@ -5,9 +5,20 @@ CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../FormatterColorsBuil
 CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../include/FormatterColorsBuilder.h
 CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.o: ../include/FormatterTypes.h
 
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../GlobalContextInstance.cpp
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/FormatterColorsBuilder.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/FormatterTypes.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/GlobalContextInstance.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/Logger.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/LoggerFormatter.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/LoggerTypes.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/LoggingContext.h
+CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o: ../include/TsQueue.h
+
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../Logger.cpp
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/FormatterColorsBuilder.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/FormatterTypes.h
+CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/GlobalContextInstance.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/Logger.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/LoggerFormatter.h
 CMakeFiles/SimpleLogger.dir/Logger.cpp.o: ../include/LoggerTypes.h
