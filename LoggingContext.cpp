@@ -71,17 +71,17 @@ namespace NFCServer {
 
         void LoggingContext::ThreadWorker() {
             while(_running) {
-                std::stringstream ss;
-                ss << "Current size of queue: " << _dispatchLog.GetSize();
-                _contextLogger->Info(ss.str());
-                LogRequest request = Dequeue();
-                _contextLogger->Info("Got request: " + request.LoggerName);
-                Logger* currentLogger = _loggers.at(request.LoggerName);
-                currentLogger->os << currentLogger->_formatter->FormatMessage(
-                    request.LoggingLevel, 
-                    request.LogMessage, 
-                    request.LogFormat
-                    );       
+                std::cout << "running" << std::endl;
+                if (!_dispatchLog.Empty()) {
+                    std::unique_lock<std::mutex> lock(_dispatchMutex);
+                    LogRequest request = Dequeue();
+                    _contextLogger->Info("Got request from " + request.LoggerName);
+                    Logger* currentLogger = _loggers.at(request.LoggerName);
+                    currentLogger->os << currentLogger->_formatter->FormatMessage(
+                        request.LoggingLevel,
+                        request.LogMessage,
+                        request.LogFormat);
+                }
                 std::this_thread::sleep_for(std::chrono::milliseconds(1));     
             }
         }
@@ -103,10 +103,8 @@ namespace NFCServer {
         }
 
         void LoggingContext::Clear() {
-
             _workerThread->join();
             _workerThread.release();
-
         }
     }
 }
