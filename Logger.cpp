@@ -8,7 +8,8 @@ namespace NFCServer {
             }
         Logger::~Logger()
         {
-            delete _context;
+            // weak_ptr and shared_ptr is needed
+            // delete _context;
             delete _formatter;
         }
         Logger::Logger(const Logger &rhs)
