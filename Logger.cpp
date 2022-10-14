@@ -8,7 +8,8 @@ namespace NFCServer {
             }
         Logger::~Logger()
         {
-            delete _context;
+            // weak_ptr and shared_ptr is needed
+            // delete _context;
             delete _formatter;
         }
         Logger::Logger(const Logger &rhs)
@@ -35,7 +36,7 @@ namespace NFCServer {
 
         void Logger::Print(const LoggerLevel& level, const std::string& message, const std::string& format = DEFAULT_FORMAT) {
             if (this->_useLoggingContext) {
-                // _context->Enqueue(_name, level, message, format);
+                _context->Enqueue(_name, level, message, format);
             } else {
                 os << _formatter->FormatMessage(level, message, format);
             }

@@ -26,7 +26,6 @@ namespace NFCServer {
                 }
 
                 void Enqueue(T t) {
-
                     std::lock_guard<std::mutex> lock(_queueMutex);
                     _queue.push(t);
                     _queueCondition.notify_one();
@@ -43,6 +42,10 @@ namespace NFCServer {
                     T val = _queue.front();
                     _queue.pop();
                     return val;
+                }
+
+                size_t GetSize() {
+                    return _queue.size();
                 }
 
         };

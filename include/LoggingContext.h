@@ -17,8 +17,10 @@ namespace NFCServer {
             private:
                 TsQueue<LogRequest> _dispatchLog;
                 std::map<std::string, Logger*> _loggers;
-                std::thread* _workerThread;
+                std::unique_ptr<std::thread> _workerThread;
                 std::atomic<bool> _running {true};
+
+                std::mutex _dispatchMutex;
 
                 // special logger, not to register
                 Logger* _contextLogger;
@@ -35,13 +37,13 @@ namespace NFCServer {
                 void Enqueue(std::string loggerName, const LoggerLevel& level, std::string message, std::string format);
                 LogRequest Dequeue();
 
-
-
                 void RegisterLogger(Logger& logger);
                 void RemoveLogger(const std::string& name);
 
                 void RunContext();
                 void StopContext();
+
+                void Clear();
 
                 
 
