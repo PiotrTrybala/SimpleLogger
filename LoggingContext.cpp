@@ -3,14 +3,16 @@
 namespace NFCServer {
     namespace Logger {
 
+
+        // TODO: move background work to BackgroundWorker class
         LoggingContext::LoggingContext() : _dispatchLog(), _loggers(), _contextLogger()
         {
-            _contextLogger->_name = "Context";
-            _contextLogger->_useLoggingContext = false;
+            _contextLogger = new Logger("Context", DEFAULT_FORMAT, false);
         }
         LoggingContext::~LoggingContext()
         {
-            delete _workerThread;
+            _contextLogger->Warn("Clearing LoggingContext");
+            // _workerThread.release();
             delete _contextLogger;
         }
         LoggingContext::LoggingContext(LoggingContext &rhs) //: _dispatchLog(rhs._dispatchLog), _loggers(rhs._loggers)
@@ -38,15 +40,21 @@ namespace NFCServer {
         }
 
         void LoggingContext::Enqueue(std::string loggerName, const LoggerLevel& level, std::string message, std::string format) {
+            std::unique_lock<std::mutex> lock(_dispatchMutex);
             LogRequest request {loggerName, level, message, format};
+            _contextLogger->Info("Queued new request: " + loggerName);
             _dispatchLog.Enqueue(request);
         }
 
         LogRequest LoggingContext::Dequeue() {
-            return _dispatchLog.Dequeue();
+            std::unique_lock<std::mutex> lock(_dispatchMutex);
+            LogRequest _dequeRequest = _dispatchLog.Dequeue();
+            _contextLogger->Info("Dequeued request: " + _dequeRequest.LoggerName);
+            return _dequeRequest;
         }
 
         void LoggingContext::RegisterLogger(Logger& logger) {
+            _contextLogger->Info("Registered new logger: " + logger._name);
             _loggers.insert(make_pair(
                 logger._name,
                 &logger
@@ -54,6 +62,7 @@ namespace NFCServer {
         }
 
         void LoggingContext::RemoveLogger(const std::string& name) {
+            _contextLogger->Info("Removed logger: " + name);
             auto loggerToRemove = _loggers.find(name);
             if (loggerToRemove != _loggers.end()) {
                 _loggers.erase(loggerToRemove);
@@ -62,13 +71,18 @@ namespace NFCServer {
 
         void LoggingContext::ThreadWorker() {
             while(_running) {
+                std::stringstream ss;
+                ss << "Current size of queue: " << _dispatchLog.GetSize();
+                _contextLogger->Info(ss.str());
                 LogRequest request = Dequeue();
+                _contextLogger->Info("Got request: " + request.LoggerName);
                 Logger* currentLogger = _loggers.at(request.LoggerName);
                 currentLogger->os << currentLogger->_formatter->FormatMessage(
                     request.LoggingLevel, 
                     request.LogMessage, 
                     request.LogFormat
-                    );            
+                    );       
+                std::this_thread::sleep_for(std::chrono::milliseconds(1));     
             }
         }
 
@@ -76,12 +90,23 @@ namespace NFCServer {
             auto f = [&]() {
                 this->ThreadWorker();
             };
-            _workerThread = new std::thread(f);
-            std::cout << "Started thread with id " << _workerThread->get_id() << std::endl;
+            _workerThread.reset(new std::thread(f));
+
+            std::stringstream ss;
+            ss << "Started thread with id " << _workerThread->get_id();
+
+            _contextLogger->Info(ss.str());
         }
 
         void LoggingContext::StopContext() {
             _running = false;
+        }
+
+        void LoggingContext::Clear() {
+
+            _workerThread->join();
+            _workerThread.release();
+
         }
     }
 }
