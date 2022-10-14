@@ -48,6 +48,10 @@ namespace NFCServer {
                     return _queue.size();
                 }
 
+                bool Empty() {
+                    return _queue.empty();
+                }
+
         };
     }
 }

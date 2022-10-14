@@ -74,12 +74,12 @@ clean: CMakeFiles/SimpleLogger.dir/clean
 CMakeFiles/SimpleLogger.dir/all:
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/depend
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target SimpleLogger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target SimpleLogger"
 .PHONY : CMakeFiles/SimpleLogger.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SimpleLogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimpleLogger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/piotrek/Projects/NFCLocks.Rev.2/SimpleLogger/build/CMakeFiles 0
 .PHONY : CMakeFiles/SimpleLogger.dir/rule

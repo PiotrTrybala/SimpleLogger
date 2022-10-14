@@ -44,9 +44,6 @@ namespace NFCServer {
                 void StopContext();
 
                 void Clear();
-
-                
-
         };
 
     }

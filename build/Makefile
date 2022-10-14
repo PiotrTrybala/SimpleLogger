@@ -150,6 +150,33 @@ FormatterColorsBuilder.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/FormatterColorsBuilder.cpp.s
 .PHONY : FormatterColorsBuilder.cpp.s
 
+GlobalContextInstance.o: GlobalContextInstance.cpp.o
+
+.PHONY : GlobalContextInstance.o
+
+# target to build an object file
+GlobalContextInstance.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.o
+.PHONY : GlobalContextInstance.cpp.o
+
+GlobalContextInstance.i: GlobalContextInstance.cpp.i
+
+.PHONY : GlobalContextInstance.i
+
+# target to preprocess a source file
+GlobalContextInstance.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.i
+.PHONY : GlobalContextInstance.cpp.i
+
+GlobalContextInstance.s: GlobalContextInstance.cpp.s
+
+.PHONY : GlobalContextInstance.s
+
+# target to generate assembly for a file
+GlobalContextInstance.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleLogger.dir/build.make CMakeFiles/SimpleLogger.dir/GlobalContextInstance.cpp.s
+.PHONY : GlobalContextInstance.cpp.s
+
 Logger.o: Logger.cpp.o
 
 .PHONY : Logger.o
@@ -243,6 +270,9 @@ help:
 	@echo "... FormatterColorsBuilder.o"
 	@echo "... FormatterColorsBuilder.i"
 	@echo "... FormatterColorsBuilder.s"
+	@echo "... GlobalContextInstance.o"
+	@echo "... GlobalContextInstance.i"
+	@echo "... GlobalContextInstance.s"
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"

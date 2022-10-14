@@ -14,6 +14,7 @@ set (CPP_SOURCES
     LoggerFormatter.cpp
     Logger.cpp
     LoggingContext.cpp
+    GlobalContextInstance.cpp
 )
 
 add_library(${PROJECT_NAME} ${CPP_SOURCES})
