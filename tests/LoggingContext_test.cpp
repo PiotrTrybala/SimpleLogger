@@ -16,19 +16,11 @@ int main() {
     Logger dbLogger {"DbLogger", DEFAULT_FORMAT, true};
     Logger timerLogger {"TimerLogger", DEFAULT_FORMAT, true};
 
-    auto f = [&timerLogger]() {
-        while(true) {
-            timerLogger.Info("Timer executes each 1 second");
-            this_thread::sleep_for(chrono::milliseconds(1000));
-        }
-        
-    };
-
     NFCServer::Logger::GetContextInstance()->RegisterLogger(serverLogger);
     NFCServer::Logger::GetContextInstance()->RegisterLogger(dbLogger);
     NFCServer::Logger::GetContextInstance()->RegisterLogger(timerLogger);
 
-    thread t(f);
+    // TODO: fix blocking the thread and fix ThreadWorker function in LoggingContext
 
     NFCServer::Logger::GetContextInstance()->RunContext();
 
@@ -43,9 +35,7 @@ int main() {
             break;
         }
     }
-
-    t.join();
-
+    
     NFCServer::Logger::GetContextInstance()->Clear();
     NFCServer::Logger::DestroyInstance();
 
