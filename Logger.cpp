@@ -1,7 +1,7 @@
 #include "include/Logger.h"
 #include "include/GlobalContextInstance.h"
 
-extern NFCServer::Logger::LoggingContext* GetContextInstance();
+extern NFCServer::Logger::LoggingContext* NFCServer::Logger::GetContextInstance();
 namespace NFCServer {
     namespace Logger {
 
@@ -34,7 +34,7 @@ namespace NFCServer {
 
         void Logger::Print(const LoggerLevel& level, const std::string& message, const std::string& format = DEFAULT_FORMAT) {
             if (this->_useLoggingContext) {
-                GetContextInstance()->Enqueue(_name, level, message, format);
+                NFCServer::Logger::GetContextInstance()->Enqueue(_name, level, message, format);
             } else {
                 os << _formatter->FormatMessage(level, message, format);
             }

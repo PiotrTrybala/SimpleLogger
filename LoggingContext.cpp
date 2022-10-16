@@ -70,10 +70,10 @@ namespace NFCServer {
         }
 
         void LoggingContext::ThreadWorker() {
+            std::cout << "IsRunning: " << std::boolalpha << _running << std::endl;
             while(_running) {
-                std::cout << "running" << std::endl;
                 if (!_dispatchLog.Empty()) {
-                    std::unique_lock<std::mutex> lock(_dispatchMutex);
+                    // std::unique_lock<std::mutex> lock(_dispatchMutex);
                     LogRequest request = Dequeue();
                     _contextLogger->Info("Got request from " + request.LoggerName);
                     Logger* currentLogger = _loggers.at(request.LoggerName);
