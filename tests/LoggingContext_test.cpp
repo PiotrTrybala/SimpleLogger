@@ -26,6 +26,7 @@ int main() {
 
     serverLogger.Info("Hello from context!");
     dbLogger.Warn("Hello from context!");
+    dbLogger.Error("Error from context!");
 
     char q = '\0';
     while(true) {
@@ -35,7 +36,7 @@ int main() {
             break;
         }
     }
-    
+
     NFCServer::Logger::GetContextInstance()->Clear();
     NFCServer::Logger::DestroyInstance();
 

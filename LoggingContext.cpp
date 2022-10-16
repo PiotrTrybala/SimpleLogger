@@ -11,8 +11,6 @@ namespace NFCServer {
         }
         LoggingContext::~LoggingContext()
         {
-            _contextLogger->Warn("Clearing LoggingContext");
-            // _workerThread.release();
             delete _contextLogger;
         }
         LoggingContext::LoggingContext(LoggingContext &rhs) //: _dispatchLog(rhs._dispatchLog), _loggers(rhs._loggers)
@@ -42,14 +40,12 @@ namespace NFCServer {
         void LoggingContext::Enqueue(std::string loggerName, const LoggerLevel& level, std::string message, std::string format) {
             std::unique_lock<std::mutex> lock(_dispatchMutex);
             LogRequest request {loggerName, level, message, format};
-            _contextLogger->Info("Queued new request: " + loggerName);
             _dispatchLog.Enqueue(request);
         }
 
         LogRequest LoggingContext::Dequeue() {
             std::unique_lock<std::mutex> lock(_dispatchMutex);
             LogRequest _dequeRequest = _dispatchLog.Dequeue();
-            _contextLogger->Info("Dequeued request: " + _dequeRequest.LoggerName);
             return _dequeRequest;
         }
 
@@ -73,9 +69,7 @@ namespace NFCServer {
             std::cout << "IsRunning: " << std::boolalpha << _running << std::endl;
             while(_running) {
                 if (!_dispatchLog.Empty()) {
-                    // std::unique_lock<std::mutex> lock(_dispatchMutex);
                     LogRequest request = Dequeue();
-                    _contextLogger->Info("Got request from " + request.LoggerName);
                     Logger* currentLogger = _loggers.at(request.LoggerName);
                     currentLogger->os << currentLogger->_formatter->FormatMessage(
                         request.LoggingLevel,
@@ -92,10 +86,10 @@ namespace NFCServer {
             };
             _workerThread.reset(new std::thread(f));
 
-            std::stringstream ss;
-            ss << "Started thread with id " << _workerThread->get_id();
+            // std::stringstream ss;
+            // ss << "Started thread with id " << _workerThread->get_id();
 
-            _contextLogger->Info(ss.str());
+            // _contextLogger->Info(ss.str());
         }
 
         void LoggingContext::StopContext() {
